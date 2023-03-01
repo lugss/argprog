@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@font-face {
+    font-family: "Dahlia";
+    src: url('./argprog/docs/fonts/dahlia-medium.eot');
+    src: url('./argprog/docs/fonts/dahlia-medium.woff2') format('woff2'),
+         url('./argprog/docs/fonts/dahlia-medium.woff') format('woff'),
+         url('./argprog/docs/fonts/dahlia-medium.ttf') format('truetype');
+}
+
+/* GENERAL */
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+body{
+    margin: 0;
+    margin-top: 50px;
+    font-family: 'Inter', sans-serif;
+    background-image: url('docs/assets/background.jpg');
+
+}
+
+a:link{
+    color: #1F442E;
+    text-decoration: none;
+}
+a:visited{
+    color:grey
+}
+a:hover{
+    color: #2D6242;
+    text-decoration: underline;
+}
+a:active{
+    text-decoration: underline;
+    color:#2D6242;
+}
+
+/* HEADER */
+
+header{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+    background-image: url('docs/assets/background.jpg');
+    border: solid #1F442E;
+    font-family: 'Syne', sans-serif;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+header *{
+    display: inline;
+    height: 50px;
+}
+
+header img{
+    margin-right: 0px;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    height: 40px;
+    width: 40px;
+}
+
+/* NAVBAR */
+#navbar{
+    margin-left: 0px;
+    width: 100%;
+}
+
+#navbar ul {
+    display: block;
+    margin-left: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+#navbar li {
+    padding: 10px;
+}
+
+#menu_toggle {
+    display: none;
+    padding-right:20px;
+    float: right;
+    margin-right: 0px;
+}
+
+#menu_container{
+    display: none;
+}
+
+#menu_container.show_menu{
+    display: block;
+}
+
+ul{
+    display: inline-block;
+    text-align: left;
+}
+div.education_skills {
+	text-align: center;
+}
+
+/* TEXT */
+h1{
+    font-size: calc(5em + 2vw);
+    font-family: "Dahlia", 'Vidaloka', serif;
+    color: #1F442E;
+}
+h2{
+    font-size: calc(2.5em - .5vw);
+    font-family: 'Syne', serif;
+    color:#1F442E;
+    padding: 10px;
+}
+
+h3{
+    font-family: 'Syne', serif;
+    padding:10px;
+}
+
+p{
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: left;
+}
+
+/* SECTIONS */
+
+section{
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 50px;
+    border: solid #1F442E;
+    margin: 20px;
+}
+
+#lourdes{
+    margin-top: 75px;
+}
+
+.profile_image {
+    height: 100%; 
+    width: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 50%;
+}
+
+#contact p {
+    text-align: center;
+}
+
+
+/* MEDIA QUERIES */
+
+/* xsmall */
+@media screen and (max-width: 576px){
+    #navbar ul {
+        display: none;
+    }
+    
+    #menu_toggle {
+        display: block;
+    }
+    
+    #navbar.show_menu ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+    }
+
+    a:link:not(#menu_toggle){
+        background-color: #E9DCC9;
+    }
+
+
+    .profile_image{
+        width: 75%;
+        height: 75%;
+    }
+    body h1{
+        font-size: calc(5em - 10vw);
+    }
+    body h2{
+        font-size: calc(2.5em - 5vw);
+    }
+    p{
+        margin-left: 0px;
+        margin-right:0px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        font-size: 15px;
+    }
+    
+}
+
+/* small */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    #navbar ul {
+        display: none;
+    }
+    
+    #menu_toggle {
+        display: block;
+    }
+    
+    #navbar.show_menu ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+    }  
+
+    a:link:not(#menu_toggle){
+        background-color: #E9DCC9;
+    }
+}
+
+/* xxlarge */
+@media screen and (min-width: 1400px){
+    h1{
+        font-size: calc(5em + .5vw);
+    }
+    h2{
+        font-size: calc(2.5em + .5vw);
+    }
+}
